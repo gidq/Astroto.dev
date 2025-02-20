@@ -31,6 +31,7 @@ if(select != undefined){
 // Get the form
 const form = document.querySelector('form');
 console.log(form);
+console.log(select);
 
 // Add event listener to the form
 if(form != undefined){
@@ -51,7 +52,7 @@ if(form != undefined){
 }
 
 if(A != undefined){
-    console.log(localStorage.getItem('RADEC'));
+    console.log(localStorage.getItem('select'));
     let aladin;
     A.init.then(() => {
         aladin = A.aladin('#aladin-lite-div', {survey: localStorage.getItem('select'), fov:localStorage.getItem('fov'), target: localStorage.getItem('RADEC')});
