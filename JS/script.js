@@ -47,9 +47,8 @@ if(form != undefined){
 
     localStorage.setItem('fov', fovValue);
     localStorage.setItem('RADEC', RA_DECValue);
-    if(localStorage.getItem('select') == null){
-        localStorage.setItem('select', selectValue);
-    }
+    localStorage.setItem('select', selectValue);
+    
     console.log(localStorage.getItem('RADEC'));
 });
 }
