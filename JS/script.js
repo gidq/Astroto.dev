@@ -24,7 +24,9 @@ if(select != undefined){
     } else if(select.slot == 'Mellinger Color'){
         selectValue = 'P/Mellinger/color';
     }
-    localStorage.setItem('select', selectValue);
+    if(localStorage.getItem('select') == null){
+        localStorage.setItem('select', selectValue);
+    }
 }
 
 
