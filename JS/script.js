@@ -24,9 +24,7 @@ if(select != undefined){
     } else if(select.slot == 'Mellinger Color'){
         selectValue = 'P/Mellinger/color';
     }
-    if(localStorage.getItem('select') == null){
-        localStorage.setItem('select', selectValue);
-    }
+    
 }
 
 
@@ -49,6 +47,9 @@ if(form != undefined){
 
     localStorage.setItem('fov', fovValue);
     localStorage.setItem('RADEC', RA_DECValue);
+    if(localStorage.getItem('select') == null){
+        localStorage.setItem('select', selectValue);
+    }
     console.log(localStorage.getItem('RADEC'));
 });
 }
