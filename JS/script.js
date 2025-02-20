@@ -16,7 +16,7 @@ let selectValue;
 
 
 
-if(select != undefined){
+while (select != undefined){
     if(select.slot == 'DSS2 Color'){
         selectValue = 'P/DSS2/color';
         console.log(selectValue);
