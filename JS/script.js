@@ -24,7 +24,7 @@ if(select != undefined){
     } else if(select.slot == 'Mellinger Color'){
         selectValue = 'P/Mellinger/color';
     }
-    sessionStorage.setItem('select', selectValue);
+    localStorage.setItem('select', selectValue);
 }
 
 
@@ -44,16 +44,16 @@ if(form != undefined){
 
     console.log(fovValue);
 
-    sessionStorage.setItem('fov', fovValue);
-    sessionStorage.setItem('RADEC', RA_DECValue);
-    console.log(sessionStorage.getItem('RADEC'));
+    localStorage.setItem('fov', fovValue);
+    localStorage.setItem('RADEC', RA_DECValue);
+    console.log(localStorage.getItem('RADEC'));
 });
 }
 
 if(A != undefined){
-    console.log(sessionStorage.getItem('RADEC'));
+    console.log(localStorage.getItem('RADEC'));
     let aladin;
     A.init.then(() => {
-        aladin = A.aladin('#aladin-lite-div', {survey: selectValue, fov:sessionStorage.getItem('fov'), target: sessionStorage.getItem('RADEC')});
+        aladin = A.aladin('#aladin-lite-div', {survey: localStorage.getItem('select'), fov:localStorage.getItem('fov'), target: localStorage.getItem('RADEC')});
     });
 }
