@@ -19,6 +19,7 @@ let selectValue;
 if(select != undefined){
     if(select.slot == 'DSS2 Color'){
         selectValue = 'P/DSS2/color';
+        console.log(selectValue);
     } else if(select.slot == '2MASS Color'){
         selectValue = 'P/2MASS/color';
     } else if(select.slot == 'Mellinger Color'){
