@@ -16,21 +16,29 @@ let selectValue;
 
 
 
-while (select != undefined){
-    if(select.slot == 'DSS2 Color'){
+if (select != undefined){
+    if(select.value == 'DSS2 Color'){
         selectValue = 'P/DSS2/color';
-        console.log(selectValue);
-    } else if(select.slot == '2MASS Color'){
+    } else if(select.value == '2MASS Color'){
         selectValue = 'P/2MASS/color';
-    } else if(select.slot == 'Mellinger Color'){
+    } else if(select.value == 'Mellinger Color'){
         selectValue = 'P/Mellinger/color';
     }
-    
+    select.addEventListener('change', (e) => {
+        if(select.value == 'DSS2 Color'){
+            selectValue = 'P/DSS2/color';
+        } else if(select.value == '2MASS Color'){
+            selectValue = 'P/2MASS/color';
+        } else if(select.value == 'Mellinger Color'){
+            selectValue = 'P/Mellinger/color';
+        } console.log(selectValue);});
 }
 
 
+
+
 // Get the form
-const form = document.querySelector('form');
+const form = document.querySelector('.form');
 console.log(form);
 console.log(select);
 
@@ -49,6 +57,8 @@ if(form != undefined){
     localStorage.setItem('fov', fovValue);
     localStorage.setItem('RADEC', RA_DECValue);
     localStorage.setItem('select', selectValue);
+
+    window.location.href = 'AladinPage.html';
     
     console.log(localStorage.getItem('RADEC'));
 });
