@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
         A.init.then(() => {
             aladin = A.aladin('#aladin-lite-div', {survey: localStorage.getItem('select'), fov:localStorage.getItem('fov'), target: localStorage.getItem('RADEC'), showReticle: false, showZoomControl: false, showFullscreenControl: false, showLayersControl: false, showGotoControl: false, showShareControl: false, showSimbadPointerControl: false, showFrame: false, fullScreen: true});
             
-            bool = true;
+            boolA = true;
         });
     }
     
