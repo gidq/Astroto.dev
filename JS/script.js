@@ -4,7 +4,7 @@ const width = document.querySelector('.Width');
 const RA_DEC = document.querySelector('.RA-DEC');
 const fov = document.querySelector('.FOV');
 const select = document.querySelector('.Select');
-bool = false;
+boolA = false;
 
 
 let heightValue;
