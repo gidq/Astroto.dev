@@ -4,8 +4,7 @@ const width = document.querySelector('.Width');
 const RA_DEC = document.querySelector('.RA-DEC');
 const fov = document.querySelector('.FOV');
 const select = document.querySelector('.Select');
-boolA = false;
-
+window.boolA = false;
 
 let heightValue;
 let widthValue;
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         A.init.then(() => {
             aladin = A.aladin('#aladin-lite-div', {survey: localStorage.getItem('select'), fov:localStorage.getItem('fov'), target: localStorage.getItem('RADEC'), showReticle: false, showZoomControl: false, showFullscreenControl: false, showLayersControl: false, showGotoControl: false, showShareControl: false, showSimbadPointerControl: false, showFrame: false, fullScreen: true});
             
-            boolA = true;
+            window.boolA = true;
         });
     }
     
